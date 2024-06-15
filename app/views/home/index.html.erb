@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link in Bio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet">
+</head>
+<body class="bg-base-100 text-base-content">
+
+<div class="container mx-auto p-4 relative">
+  <form action="/themes/change" method="post" class="join join-vertical absolute top-4 left-4">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="radio" name="theme" class="btn theme-controller join-item" aria-label="Default" value="default" />
+    <input type="radio" name="theme" class="btn theme-controller join-item" aria-label="Retro" value="retro" />
+    <input type="radio" name="theme" class="btn theme-controller join-item" aria-label="Cyberpunk" value="cyberpunk" />
+    <input type="radio" name="theme" class="btn theme-controller join-item" aria-label="Valentine" value="valentine" />
+    <input type="radio" name="theme" class="btn theme-controller join-item" aria-label="Aqua" value="aqua" />
+  </form>
+
+  <div class="flex flex-col items-center space-y-4">
+    <div class="avatar">
+      <div class="w-24 rounded-full">
+        <img src="https://media.licdn.com/dms/image/D4E03AQG9kSxqDEuRYw/profile-displayphoto-shrink_100_100/0/1699071410097?e=1723680000&v=beta&t=TaT4Y6zwGjYaa9beuye14P_LjVak3DkokBoSwqu35Xo" alt="Profile Picture">
+      </div>
+    </div>
+    
+    <div class="text-2xl font-bold">
+      Cindy Iloegbunam
+    </div>
+    
+    <div class="flex space-x-4">
+      <a href="https://github.com/Cindellai" target="_blank" class="btn btn-outline btn-primary">
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/cindy-iloegbunam-a93265242/" target="_blank" class="btn btn-outline btn-primary">
+        LinkedIn
+      </a>
+    </div>
+    
+    <div class="grid grid-cols-1 gap-4 w-full max-w-2xl">
+      <div class="card card-compact w-full bg-base-100 shadow-xl">
+        <figure><img class="h-32 w-full object-cover" src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxijemxBs5s4x3VtmTVOw0jqLSSMTWE58xZT3wEXI8DA7HPGn5tUuP9Ugz15UPuCOXC_95OsnZ1XQjEbW7Px_1pY-&format=source" alt="Image Mosaic"></figure>
+        <div class="card-body">
+          <h2 class="card-title hover:text-primary"><a href="https://github.com/Cindellai/Image-Mosaic-" target="_blank">Image Mosaic</a></h2>
+          <p>Create a mosaic image from a collection of smaller images.</p>
+        </div>
+      </div>
+
+      <div class="card card-compact w-full bg-base-100 shadow-xl">
+        <figure><img class="h-32 w-full object-cover" src="https://lh6.googleusercontent.com/kOaEJQq2qq_2BaPKqsj8tLrdoStf5Yi9teY4ZCtbTh95O4_8Y80n0ZJyFKEXfxmMXexQNJdHTColch_P1fEZL5HYVW0mY41OgzAYVi0HmHNjhRdOPP7QC9Xbnw4PLKEnaTm8yA6sEsrWYywa4O6q5vI" alt="Network Scanner"></figure>
+        <div class="card-body">
+          <h2 class="card-title hover:text-primary"><a href="https://github.com/Cindellai/Network-Scanner" target="_blank">Network Scanner</a></h2>
+          <p>Scan and discover devices on a network.</p>
+        </div>
+      </div>
+
+      <div class="card card-compact w-full bg-base-100 shadow-xl">
+        <figure><img class="h-32 w-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_8UN6e2O0DfZcvcgySvYIAn3ukQBikKNFWg&s" alt="Bomberman"></figure>
+        <div class="card-body">
+          <h2 class="card-title hover:text-primary"><a href="https://github.com/Cindellai/Bomberman" target="_blank">Bomberman</a></h2>
+          <p>A classic Bomberman game clone implemented in Python.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

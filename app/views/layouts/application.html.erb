@@ -13,9 +13,14 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet">
+
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-green-900 text-base-content" data-theme="<%= session[:theme] || 'default' %>">
+    <main class="container mx-auto mt-28 px-5 flex">
+      <%= yield %>
+    </main>
   </body>
 </html>
